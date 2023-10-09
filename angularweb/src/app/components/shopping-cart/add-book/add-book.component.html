@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mt-5">
+      <div class="card bg-light shadow-lg rounded">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Add Book to Cart</h2>
+          <form (submit)="createCartItem()">
+            <div class="form-group">
+              <label for="bookId">Book ID:</label>
+              <input type="number" id="bookId" [(ngModel)]="cartItemRequestDto.bookId" name="bookId" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" [(ngModel)]="cartItemRequestDto.quantity" name="quantity" class="form-control" required>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-info btn-lg btn-block mt-3">Add to Cart</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

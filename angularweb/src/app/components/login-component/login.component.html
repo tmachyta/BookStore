@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mt-5">
+      <div class="card bg-light">
+        <div class="card-body">
+          <h2 class="card-title text-center py-3">Login</h2>
+          <form #loginForm="ngForm" (ngSubmit)="login()">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" class="form-control" required [(ngModel)]="email">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" class="form-control" required [(ngModel)]="password">
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg btn-block mt-3">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

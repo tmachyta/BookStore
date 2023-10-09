@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mt-5">
+      <div class="card bg-light shadow-lg rounded">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">User Orders</h2>
+
+          <div *ngIf="order">
+            <h4 class="mb-3">Order Details:</h4>
+            <p><strong>Order ID:</strong> {{ order.id }}</p>
+            <p><strong>User ID:</strong> {{ order.userId }}</p>
+            <p><strong>Status:</strong> {{ order.status }}</p>
+            <p><strong>Total Amount:</strong> {{ order.total }}</p>
+            <p><strong>Order Date:</strong> {{ order.orderDate }}</p>
+            <p><strong>Shipping Address:</strong> {{ order.shippingAddress }}</p>
+
+            <h4 class="mt-4">List of Items in the Order:</h4>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let orderItem of order.orderItems">
+                {{ orderItem.productName }} - Quantity: {{ orderItem.quantity }} - Price: {{ orderItem.price }}
+              </li>
+            </ul>
+          </div>
+
+          <div *ngIf="!order">
+            <p class="text-center">No orders found for the user with ID {{ userId }}.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

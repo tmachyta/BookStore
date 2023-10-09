@@ -1,0 +1,65 @@
+/* styles.css */
+body, nav {
+  background-image: url('/assets/background.jpg'); /* Замініть шлях до вашого зображення фону */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Прозорий фон для картки */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #333;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+/* styles.css */
+
+/* Задній фон для навігаційного меню */
+.navbar {
+  background-color: #333;
+}
+
+/* Стилі для посилань у навігаційному меню */
+.navbar a.nav-link {
+  color: #fff; /* Колір тексту посилань */
+  font-weight: bold; /* Товщина шрифту */
+  text-transform: uppercase; /* Перетворення тексту в верхній регістр */
+  margin-right: 20px; /* Відступи між посиланнями */
+}
+
+/* Стилі для активного посилання */
+.navbar a.nav-link.active {
+  color: #ffcc00; /* Колір активного посилання */
+}
+
+/* Зміна коліру тексту кнопок в навігаційному меню */
+.navbar a.nav-link {
+  color: #ffffff; /* Змініть цей колір на бажаний */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+/* Стилі для секцій */
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Стилі для кнопок */
+.btn {
+  margin-top: 10px;
+}

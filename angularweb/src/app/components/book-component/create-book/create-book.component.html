@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3 mt-5">
+      <div class="card bg-light">
+        <div class="card-body">
+          <h2 class="card-title text-center py-3">Create new Book</h2>
+          <form (submit)="createBook()">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" [(ngModel)]="newBook.title" name="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="author">Author:</label>
+              <input type="text" id="author" [(ngModel)]="newBook.author" name="author" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="isbn">Isbn:</label>
+              <input type="text" id="isbn" [(ngModel)]="newBook.isbn" name="isbn" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="price">Price:</label>
+              <input type="number" id="price" [(ngModel)]="newBook.price" name="price" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="description">Description:</label>
+              <input type="text" id="description" [(ngModel)]="newBook.description" name="description" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="coverImage">CoverImage:</label>
+              <input type="text" id="coverImage" [(ngModel)]="newBook.coverImage" name="coverImage" class="form-control">
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-success btn-lg btn-block mt-3">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

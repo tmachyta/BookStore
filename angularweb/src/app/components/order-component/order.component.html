@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 mt-5">
+      <div class="card bg-light shadow-lg rounded">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">Orders</h2>
+          <div class="container">
+            <table class="table table-striped table-bordered" style="background: transparent; color: black;">
+              <thead>
+              <tr>
+                <th>ID</th>
+                <th>User ID</th>
+                <th>Status</th>
+                <th>Total</th>
+                <th>Order Date</th>
+                <th>Shipping Address</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let order of orders">
+                <td>{{ order.id }}</td>
+                <td>{{ order.userId }}</td>
+                <td>{{ order.status }}</td>
+                <td>{{ order.total }}</td>
+                <td>{{ order.orderDate }}</td>
+                <td>{{ order.shippingAddress }}</td>
+                <td>
+                  <button (click)="deleteOrder(order.id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
